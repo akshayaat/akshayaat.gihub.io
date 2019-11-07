@@ -1,0 +1,154 @@
+<html>
+	<head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'> <!-- for font family -->
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<img src="tlogo.jpg" width="300px" height="58px">
+		  <a href="firstpage.html">HOME</a>
+		  <a href="aboutus.html">ABOUT US</a>
+		  <a href="product.html">PRODUCTS</a>
+		  <a href="contactus.html">CONTACT US</a>
+		  <a href="customizefurn.html">CUSTOM FURNITURE</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		<div id="maincont">
+			<h1 id="about">ABOUT US:</h1>
+			<p id="about1">
+				Furniture Point is since 1994. From the beginning, the ambition was to create beautiful and inspiring pieces that would 
+				be loved.We are one of the leading companies satisfying both resedential and corporate needs.
+			</p>
+			<div id="forimg">
+			<img id="img" src="horizontal.jpg" width="900px" height="180px">
+			</div>
+			<br>
+			<h1>OUR VISION</h1>
+			<p id="aboutus">
+				Our Vision is to be one of the leading furniture manufacturer offering innovative
+				and superior quality products
+			</p>
+			<h1>OUR MISSION</h1>
+			<p id="aboutus">
+				Our Mission is to create Value for our customers through Reliability and Flexibility.
+				We want our customers to experience the warmth and comfort through Respect and Trust
+			</p>
+			
+		</div>
+	<style>
+		#forimg{
+			width:900px;
+			height:180px;
+			margin:0 auto;
+		}
+		#about{
+		text-align:left;
+		}
+		#about1{
+			font-family:"Oswald";
+			font-size:20px;
+			color:#ff3b3d;
+			text-align:left;
+		}
+		h1{
+			font-family:"Oswald";
+			color:#ff3b3d;
+			font-weight:550px;
+			text-align:center;
+		}
+		#aboutus{
+			
+			font-family:"Oswald";
+			font-size:20px;
+			color:#ff3b3d;
+			text-align:center;
+		}
+		#maincont{
+			width:auto;
+			height:600px;
+			background-color:#efefef;
+		}
+		
+		#myTopnav{
+			font-size:25px;
+			font-family:Oswald;
+		}
+
+		.topnav {
+		  overflow: hidden;
+		  background-color:#cceaf4;
+		}
+
+		.topnav a {
+			font-size:20px;
+			font-family:Oswald;
+		  float: left;
+		  display: block;
+		  color: #ff3b3d;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		.topnav .icon {
+		  display: none;
+		}
+
+		
+		.topnav a:hover{
+		  background-color:#ff3b3d;
+		  color:#cceaf4;
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav a:not(:first-child) {
+			display: none;
+		  }
+		  .topnav a.icon {
+			float: right;
+			display: block;
+		  }
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive .icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		  }
+		  .topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+		  }
+		  .topnav.responsive {float: none;}
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive {
+			display: block;
+			width: 100%;
+			text-align: left;
+		  }
+		}
+		img{
+		float:left;
+		}
+	</style>
+	<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	</body>
+</html>

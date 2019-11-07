@@ -1,0 +1,277 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'> <!-- for font family -->
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<img src="tlogo.jpg" width="300px" height="58px">
+		  	  <a href="firstpage.html">HOME</a>
+			  <a href="aboutus.html">ABOUT US</a>
+			  <a href="product.html">PRODUCTS</a>
+			  <a href="contactus.html">CONTACT US</a>
+			  <a href="customizefurn.html">CUSTOM FURNITURE</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		
+		<div id="maincont" class="col-centered">
+		<br>
+			<p id="para">
+			Hello dear Customer , Are you looking for your dream furniture? we are here to customise furniture of your dreams.
+			Our designers can understand each of your requirement concerning your preferred style and style to craft exclusive furniture.
+			So go ahead and share your custom furniture ideas with us online and let our design experts do the magic.
+			</p>
+			<div id="section">
+			<img id="cust" src="custimgpart1.jpg" width="550px" height="200px">
+			
+				<form name="custform" onsubmit="return validateForm()">
+				<table>
+				    <tr>
+					<td>
+					<label  for="name">NAME:</label>
+					</td>
+					<td>
+					<input id="fr" type="text" id="name" placeholder="Enter your name" name="name" maxlength="20" required>
+					</td>
+					</tr>
+				
+					<br> 
+					<tr>
+					<td>
+					<label for="email">EMAIL ID:</label>
+					</td>
+					<td>
+					<input id="fr" type="email" id="email" placeholder="Enter your email" name="email" required>
+					</td>
+					</tr>
+					<br>
+					
+					<tr>
+					<td>
+					<label for="phoneno">MOBILE NO:</label>          
+					</td>
+					<td>
+					<input id="fr" type="phoneno" id="phone" placeholder="Enter your mobile no" name="mobile" maxlength="10" required>
+					</td>
+					</tr>
+					<br>
+					
+					<tr>
+					<td>
+					<label for="productvar">PRODUCT VARIETY:</label>
+					</td>
+					<td>
+					  <select  id="sel1">
+						<option value="">Please select...</option>
+						<option value="Chairs">Chairs</option>
+						<option value="Table">Table</option>
+						<option value="sofa">Sofa</option>
+						<option value="Cot">cot</option>
+						<option value="Dining sets">Dining Sets</option>
+						<option value="Home furniture">Home Furniture</option>
+						<option value="Office furniture">Office Furniture</option>
+						<option>Others</option>
+					  </select>
+					 </td>
+					 </tr>
+					 <br>
+					 
+					 <tr>
+					 <td>
+					  <label for="description">DESCRIPTION:</label>
+					 </td>
+					 <td>
+					  <textarea id="fr" rows="3" id="description" required></textarea>
+					 </td>
+					 </tr>
+					 
+					 <br>
+					 <tr>
+					 <td>
+					 <label for="fileupl">UPLOAD YOUR FILE:</label>
+					 </td>
+					 <td>
+					<input id="upl"  type="file" id="fileupl" accept=".jpg,.png"/>
+					 </td>
+					 </tr>
+				</table>
+					<br>
+					<input id="sub" type="submit" value="SUBMIT">
+				</form>
+				<img id="cust" src="custimgpart2.jpg" width="550px" height="300px">
+				
+			</div>
+			
+			  
+			
+			
+			</div>
+		
+			
+		<script>
+			
+			function validateForm() {
+			var cname=document.custform.name.value;
+			var pat=/^[a-zA-z]{5,20}$/;
+			  
+			var cmobile=document.custform.mobile.value;
+			var pat2=/^[0-9]{10}$/;
+				if(!pat.test(cname))
+				{
+				alert("Please enter proper name atleast 5 characters required");
+				return false;
+				}
+				else if(!pat2.test(cmobile))
+				{
+				alert("Please enter proper Mobile no");
+				return false;
+				}
+				else{
+					alert("Thank you dear customer we will contact you soon")
+					return true;
+				}
+			}
+				
+		function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+		</script>
+		<style>
+			td{
+				color:#ff3b3d;
+				font-size:20px;
+				
+			}
+			form{
+				margin-left:25%;
+			}
+				#upl{
+				background-color:#ff3b3d;
+				color:#cceaf4;
+				font-family:"Oswald";
+				font-weight:550;
+			}
+			#sub{
+				background-color:#ff3b3d;
+				color:#cceaf4;
+				font-family:"Oswald";
+				font-weight:550;
+				margin-left:100px;
+			}
+			#sel:focus{
+				background-color:#cceaf4;
+				border:2px solid #ff3b3d;
+				color:#ff3b3d;
+			}
+			#fr:focus{
+				background-color:#cceaf4;
+				border:2px solid #ff3b3d;
+				color:#ff3b3d;
+			}
+			form{
+				
+				font-family:"Oswald";
+				font-size:20px;
+				color:#ff3b3d;
+			}
+			#section{
+				width:550px;
+				height:700px;
+				margin:0 auto;
+			}
+			#para{
+				font-family:"Oswald";
+				font-size:20px;
+				color:#ff3b3d;
+				text-align:center;
+				letter-spacing:1px;
+			}
+			#maincont{
+				width:auto;
+				height:1200px;
+				background-color:#efefef;
+			}
+			body {
+			margin:0;
+			font-family:Oswald;
+			}
+
+		#myTopnav{
+			font-size:25px;
+			font-family:Oswald;
+		}
+
+		.topnav {
+		  overflow: hidden;
+		  background-color:#cceaf4;
+		}
+
+		.topnav a {
+			font-size:20px;
+			font-family:Oswald;
+		  float: left;
+		  display: block;
+		  color: #ff3b3d;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		.topnav .icon {
+		  display: none;
+		}
+
+		
+		.topnav a:hover{
+		  background-color:#ff3b3d;
+		  color:#cceaf4;
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav a:not(:first-child) {
+			display: none;
+		  }
+		  .topnav a.icon {
+			float: right;
+			display: block;
+		  }
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive .icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		  }
+		  .topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+		  }
+		  .topnav.responsive {float: none;}
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive {
+			display: block;
+			width: 100%;
+			text-align: left;
+		  }
+		}
+		img{
+		float:left;
+		}
+		</style>
+		
+	</body>
+</html>
